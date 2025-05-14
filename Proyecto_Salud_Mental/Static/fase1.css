@@ -60,3 +60,27 @@ h1 {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+#boton {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px; /* menos padding para hacerlo más compacto */
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 2px solid #aac04f;
+    font-size: 20px;
+    border-radius: 10px;
+
+    width: fit-content;   
+    margin: 20px auto;    
+}
+
+#ingDatos{
+    text-decoration: none;
+    color: black;
+}
+
+#boton:hover {
+    background-color: #cbe480;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
