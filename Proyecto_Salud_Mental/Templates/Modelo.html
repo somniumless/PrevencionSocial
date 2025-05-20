@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Evaluación</title>
 </head>
 <body>
-    
+    <h2>Evaluación de riesgo</h2>
+    <form method="POST" action="/predecir">
+        Edad: <input type="number" name="edad" min="18" max="85" required><br>
+
+        Género:
+        <select name="genero">
+            <option value="Mujer">Mujer</option>
+            <option value="Hombre">Hombre</option>
+        </select><br>
+
+        Estado civil:
+        <select name="estado_civil">
+            <option>Soltero/a</option>
+            <option>Casado/a</option>
+            <option>Divorciado/a</option>
+            <option>Viudo/a</option>
+            <option>Unión libre</option>
+        </select><br>
+
+        Ubicación:
+        <select name="ubicacion">
+            <option>Urbano</option>
+            <option>Rural</option>
+        </select><br>
+
+        ¿Antecedente de depresión familiar?
+        <select name="depresion">
+            <option>Sí</option>
+            <option>No</option>
+        </select><br>
+
+        ¿Pérdida familiar reciente?
+        <select name="perdida">
+            <option>Sí</option>
+            <option>No</option>
+        </select><br>
+
+        ¿Ha sufrido traumas?
+        <select name="trauma">
+            <option>Sí</option>
+            <option>No</option>
+        </select><br>
+
+        Nivel de alcoholismo:
+        <select name="alcoholismo">
+            <option>No</option>
+            <option>Ocasional</option>
+            <option>Regular</option>
+            <option>Dependencia</option>
+        </select><br>
+
+        Problemas económicos:
+        <select name="economicos">
+            <option>No</option>
+            <option>Leves</option>
+            <option>Severos</option>
+        </select><br>
+
+        Cambios en estilo de vida:
+        <select name="cambios">
+            <option>No</option>
+            <option>Leves</option>
+            <option>Significativos</option>
+        </select><br>
+
+        Problemas en relaciones personales:
+        <select name="relaciones">
+            <option>Buenas</option>
+            <option>Leves</option>
+            <option>Severas</option>
+        </select><br>
+
+        <input type="submit" value="Evaluar Riesgo">
+    </form>
 </body>
 </html>

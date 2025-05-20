@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+    <h2>Resultado de la Evaluación</h2>
+    {% if alerta == 1 %}
+        <p style="color:red;">⚠️ Se detectan indicios de riesgo. Se recomienda atención psicológica.</p>
+    {% else %}
+        <p style="color:green;">✅ No se detectan indicios graves de riesgo.</p>
+    {% endif %}
+    <a href="/">Volver</a>
+</body>
+</html>
