@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Static/fase3.css">
+    <title>Ingeniería del modelo</title>
+</head>
+<body>
+    <header>
+        <p id="sub">proyecto</p>
+        <p id="nombre_proyecto">detección temprana y prevención del suicidio</p>
+        <h1>Ingeniería del modelo</h1>
+    </header>
+    <main>
+        <div>
+            <section>
+                <p>Selección del modelo</p>
+                <p>Dada la naturaleza de este proyecto, se opto por usar el modelo de regresión logistica, donde el objetivo principal es la detección de sintomas que puedan llevar a un usuario al suicidio, lo que se busca con el modelo es ingresar una serie de datos evaluados en el usuario y al final el sistema pueda determinar si hay o no una alerta frente a un posible caso de suicidio.</p>
+            </section>
+            <section>
+                <p>Entrenamiento</p>
+                <p>para el entrenamiento del modelo se opto por buscar las principales causas que pueden llevar a una persona a tratar de acabar con su vida, estos datos obtenidos tanto de bases de información de la organización mundial de la salud como de fuentes oficiales como minsalud en Colombia, confirman una serie de puntos en común que tienen varios usuarios como el alcoholismo como traumas sin tratar.</p>
+            </section>
+            <section>
+                <p>Ajuste de Hiperparámetros</p>
+                <p>Durante esta etapa se realizaron pruebas para optimizar los parámetros del modelo de regresión logística. Se ajustaron valores como la tasa de aprendizaje, el número de iteraciones y el método de regularización, con el fin de mejorar la precisión sin caer en sobreajuste. Se utilizó validación cruzada para evaluar el impacto de cada combinación de hiperparámetros y seleccionar aquellos que ofrecían el mejor desempeño en el conjunto de entrenamiento.</p>
+            </section>
+
+            <section>
+                <p>Validación</p>
+                <p>Una vez ajustado el modelo, se procedió a validarlo con un conjunto de datos no utilizado durante el entrenamiento. Esto permitió evaluar su capacidad para generalizar ante nuevos casos. Se utilizaron métricas como la precisión, el recall y el F1-score, priorizando una alta sensibilidad, ya que en este tipo de proyectos es más crítico identificar posibles casos de riesgo que minimizar falsos positivos. Los resultados indicaron un buen desempeño del modelo al identificar patrones asociados a factores de riesgo en los usuarios.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
