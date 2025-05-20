@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Generados</title>
+    <link rel="stylesheet" href="static/fase2.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Datos Generados</h1>
+        <p>Estos datos son generados de manera aleatoria.</p>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    {% for columna in datos[0] %}
+                    <th>{{ columna }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for fila in datos %}
+                <tr>
+                    {% for valor in fila.values() %}
+                    <td>{{ valor }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
