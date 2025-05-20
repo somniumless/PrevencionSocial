@@ -7,7 +7,8 @@ import joblib
 app = Flask(__name__)
 
 # Cargar modelo previamente entrenado
-modelo = joblib.load('modelo_suicidio.pkl')
+contenido = joblib.load('modelo_suicidio.pkl')
+modelo_cargado = contenido['modelo']  # Cambia 'modelo' por la clave correcta si es otra
 
 @app.route('/')
 def index():
@@ -30,10 +31,10 @@ def fase3():
 def modelo_html():
     return render_template('Modelo.html')
 
-@app.route('/predecir', methods=['GET','POST'])
+@app.route('/predecir', methods=['GET', 'POST'])
 def predecir():
     datos_usuario = {
-        'Edad': request.form['edad'],
+        'Edad': int(request.form['edad']),
         'Género': request.form['genero'],
         'Estado Civil': request.form['estado_civil'],
         'Ubicación': request.form['ubicacion'],
@@ -48,10 +49,9 @@ def predecir():
 
     df_usuario = pd.DataFrame([datos_usuario])
     df_preprocesado = preprocesar_datos(df_usuario)
-    prediccion = modelo.predict(df_preprocesado)[0]
+    prediccion = modelo_cargado.predict(df_preprocesado)[0]
 
     return render_template('resultado.html', alerta=prediccion)
-
 
 if __name__ == '__main__':
     app.run(debug=True)

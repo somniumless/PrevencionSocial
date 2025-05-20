@@ -2,15 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Resultado</title>
+    <title>Resultado de la Predicción</title>
+    <link rel="stylesheet" href="../static/resultado.css">
 </head>
 <body>
-    <h2>Resultado de la Evaluación</h2>
-    {% if alerta == 1 %}
-        <p style="color:red;">⚠️ Se detectan indicios de riesgo. Se recomienda atención psicológica.</p>
-    {% else %}
-        <p style="color:green;">✅ No se detectan indicios graves de riesgo.</p>
-    {% endif %}
-    <a href="/">Volver</a>
+    <div class="container">
+        <h1>Resultado de la Evaluación</h1>
+
+        {% if alerta == 1 %}
+            <p class="alerta-roja">
+                Atención: Según los datos ingresados, existe un riesgo de alerta para indicios de suicidio.
+                Te recomendamos buscar apoyo profesional.
+            </p>
+        {% else %}
+            <p class="alerta-verde">
+                No se detectaron indicios de alerta con los datos ingresados.
+                Sin embargo, si te sientes mal, considera consultar con un profesional.
+            </p>
+        {% endif %}
+
+        <a href="/">Volver al inicio</a>
+    </div>
 </body>
+
 </html>

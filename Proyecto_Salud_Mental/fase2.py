@@ -36,8 +36,20 @@ def generar_cambios_estilo_vida():
 def generar_problemas_relaciones():
     return random.choices(['Buenas', 'Leves', 'Severas'], weights=[0.57, 0.25, 0.18])[0]
 
-def generar_datos_aleatorios(num_muestras=100): 
-    datos_aleatorios = [] 
+def asignar_alerta(muestra):
+    if (
+        muestra['Antecedente Depresión Familiar'] == 'Sí' or
+        muestra['Pérdida Familiar Reciente'] == 'Sí' or
+        muestra['Trauma'] == 'Sí' or
+        muestra['Alcoholismo'] in ['Regular', 'Dependencia'] or
+        muestra['Problemas Económicos'] == 'Severos'
+    ):
+        return 1
+    else:
+        return 0
+
+def generar_datos_aleatorios(num_muestras=100):
+    datos_aleatorios = []
     for _ in range(num_muestras):
         muestra = {
             'Edad': generar_edad(),
@@ -52,5 +64,6 @@ def generar_datos_aleatorios(num_muestras=100):
             'Cambios Estilo de Vida': generar_cambios_estilo_vida(),
             'Problemas Relaciones': generar_problemas_relaciones(),
         }
-        datos_aleatorios.append(muestra) 
+        muestra['Alerta'] = asignar_alerta(muestra)
+        datos_aleatorios.append(muestra)
     return pd.DataFrame(datos_aleatorios)

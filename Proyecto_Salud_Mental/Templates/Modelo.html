@@ -1,83 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Formulario de Evaluación</title>
+    <meta charset="UTF-8" />
+    <title>Formulario de Predicción</title>
+    <link rel="stylesheet" href="../static/modelo.css" />
 </head>
 <body>
-    <h2>Evaluación de riesgo</h2>
-    <form method="POST" action="/predecir">
-        Edad: <input type="number" name="edad" min="18" max="85" required><br>
+    <h1>Formulario para Predicción de Alerta</h1>
+    <form action="/predecir" method="post">
+        <label>Edad: <input type="number" name="edad" min="18" max="85" required></label><br><br>
 
-        Género:
-        <select name="genero">
-            <option value="Mujer">Mujer</option>
-            <option value="Hombre">Hombre</option>
-        </select><br>
+        <label>Género:
+            <select name="genero" required>
+                <option value="Mujer">Mujer</option>
+                <option value="Hombre">Hombre</option>
+            </select>
+        </label><br><br>
 
-        Estado civil:
-        <select name="estado_civil">
-            <option>Soltero/a</option>
-            <option>Casado/a</option>
-            <option>Divorciado/a</option>
-            <option>Viudo/a</option>
-            <option>Unión libre</option>
-        </select><br>
+        <label>Estado Civil:
+            <select name="estado_civil" required>
+                <option value="Soltero/a">Soltero/a</option>
+                <option value="Casado/a">Casado/a</option>
+                <option value="Divorciado/a">Divorciado/a</option>
+                <option value="Viudo/a">Viudo/a</option>
+                <option value="Unión libre">Unión libre</option>
+            </select>
+        </label><br><br>
 
-        Ubicación:
-        <select name="ubicacion">
-            <option>Urbano</option>
-            <option>Rural</option>
-        </select><br>
+        <label>Ubicación:
+            <select name="ubicacion" required>
+                <option value="Urbano">Urbano</option>
+                <option value="Rural">Rural</option>
+            </select>
+        </label><br><br>
 
-        ¿Antecedente de depresión familiar?
-        <select name="depresion">
-            <option>Sí</option>
-            <option>No</option>
-        </select><br>
+        <label>Antecedente Depresión Familiar:
+            <select name="depresion" required>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+        </label><br><br>
 
-        ¿Pérdida familiar reciente?
-        <select name="perdida">
-            <option>Sí</option>
-            <option>No</option>
-        </select><br>
+        <label>Pérdida Familiar Reciente:
+            <select name="perdida" required>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+        </label><br><br>
 
-        ¿Ha sufrido traumas?
-        <select name="trauma">
-            <option>Sí</option>
-            <option>No</option>
-        </select><br>
+        <label>Trauma:
+            <select name="trauma" required>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+        </label><br><br>
 
-        Nivel de alcoholismo:
-        <select name="alcoholismo">
-            <option>No</option>
-            <option>Ocasional</option>
-            <option>Regular</option>
-            <option>Dependencia</option>
-        </select><br>
+        <label>Alcoholismo:
+            <select name="alcoholismo" required>
+                <option value="No">No</option>
+                <option value="Ocasional">Ocasional</option>
+                <option value="Regular">Regular</option>
+                <option value="Dependencia">Dependencia</option>
+            </select>
+        </label><br><br>
 
-        Problemas económicos:
-        <select name="economicos">
-            <option>No</option>
-            <option>Leves</option>
-            <option>Severos</option>
-        </select><br>
+        <label>Problemas Económicos:
+            <select name="economicos" required>
+                <option value="No">No</option>
+                <option value="Leves">Leves</option>
+                <option value="Severos">Severos</option>
+            </select>
+        </label><br><br>
 
-        Cambios en estilo de vida:
-        <select name="cambios">
-            <option>No</option>
-            <option>Leves</option>
-            <option>Significativos</option>
-        </select><br>
+        <label>Cambios Estilo de Vida:
+            <select name="cambios" required>
+                <option value="No">No</option>
+                <option value="Leves">Leves</option>
+                <option value="Significativos">Significativos</option>
+            </select>
+        </label><br><br>
 
-        Problemas en relaciones personales:
-        <select name="relaciones">
-            <option>Buenas</option>
-            <option>Leves</option>
-            <option>Severas</option>
-        </select><br>
+        <label>Problemas en Relaciones:
+            <select name="relaciones" required>
+                <option value="Buenas">Buenas</option>
+                <option value="Leves">Leves</option>
+                <option value="Severas">Severas</option>
+            </select>
+        </label><br><br>
 
-        <input type="submit" value="Evaluar Riesgo">
+        <button type="submit">Predecir</button>
     </form>
 </body>
 </html>
+
