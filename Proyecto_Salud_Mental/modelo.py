@@ -1,15 +1,10 @@
-import random
+from fase2 import generar_datos_aleatorios
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import joblib
 
-# --- Funciones generadoras (las que ya tienes) ---
-
-# Incluye todas las funciones que ya tienes aquí (generar_edad, generar_genero, etc.)
-
-# --- Asignar alerta ---
 def asignar_alerta(df):
     df = df.copy()
     df['Alerta'] = df.apply(
@@ -23,7 +18,6 @@ def asignar_alerta(df):
     )
     return df
 
-# --- Preprocesamiento ---
 def preprocesar_datos(df):
     df_codificado = df.copy()
     for columna in df_codificado.columns:
@@ -32,7 +26,6 @@ def preprocesar_datos(df):
             df_codificado[columna] = le.fit_transform(df_codificado[columna])
     return df_codificado
 
-# --- Entrenar y guardar modelo ---
 def entrenar_y_guardar_modelo():
     df = generar_datos_aleatorios(500)
     df = asignar_alerta(df)
@@ -49,6 +42,5 @@ def entrenar_y_guardar_modelo():
     joblib.dump(modelo, 'modelo_suicidio.pkl')
     print("Modelo guardado como modelo_suicidio.pkl")
 
-# Ejecutar entrenamiento
 if __name__ == "__main__":
     entrenar_y_guardar_modelo()

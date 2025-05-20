@@ -1,10 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from fase2 import generar_datos_aleatorios
+from modelo import preprocesar_datos
 import pandas as pd
 import joblib
 
-
 app = Flask(__name__)
+
+# Cargar modelo previamente entrenado
+modelo = joblib.load('modelo_suicidio.pkl')
 
 @app.route('/')
 def index():
@@ -24,10 +27,10 @@ def fase3():
     return render_template('fase3.html')
 
 @app.route('/modelo')
-def modelo():
+def modelo_html():
     return render_template('Modelo.html')
 
-@app.route('/predecir', methods=['POST'])
+@app.route('/predecir', methods=['GET','POST'])
 def predecir():
     datos_usuario = {
         'Edad': request.form['edad'],
@@ -48,6 +51,7 @@ def predecir():
     prediccion = modelo.predict(df_preprocesado)[0]
 
     return render_template('resultado.html', alerta=prediccion)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
