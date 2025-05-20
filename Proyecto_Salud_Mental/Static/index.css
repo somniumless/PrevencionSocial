@@ -1,0 +1,91 @@
+header{
+    background: linear-gradient(135deg, #aee7bd 0%, #6bbf7a 100%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#bienvenida{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(135deg, #aee7bd 0%, #6bbf7a 100%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: larger;
+}
+
+#menu{
+    background: #fff;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    border: 2.5px solid;
+    border-image: linear-gradient(90deg, #7faaff, #a259ff, #7faaff) 1;
+    border-radius: 12px;
+    padding: 32px 0 28px 0;
+    margin-top: 28px; /* separa del header */
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13), 0 0 0 4px rgba(122, 170, 255, 0.15); /* Sombra extra para el borde */
+    width: 88%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    animation: border-anim 3s linear infinite;
+}
+
+@keyframes border-anim {
+    0% {
+        border-image: linear-gradient(90deg, #7faaff, #5816af, #7faaff) 1;
+    }
+    50% {
+        border-image: linear-gradient(270deg, #a259ff, #7faaff, #5816af) 1;
+    }
+    100% {
+        border-image: linear-gradient(90deg, #7faaff, #5816af, #7faaff) 1;
+    }
+}
+
+#opciones{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+}
+
+#Negocio, #IngDeDatos, #IngModelo, #EvModelo, #Despliegue {
+    background: linear-gradient(135deg, #b7e7e7 0%, #aee7bd 100%);
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    padding: 12px 20px;
+    min-width: 180px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#Negocio:hover, #IngDeDatos:hover, #IngModelo:hover, #EvModelo:hover, #Despliegue:hover {
+    background: linear-gradient(135deg, #aee7bd 0%, #6bbf7a 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
