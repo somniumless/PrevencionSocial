@@ -1,0 +1,86 @@
+body {
+    background-color: #d5e6ab;
+}
+
+header {
+    background-color: #bbe355;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 20px;
+}
+
+#sub {
+    background-color: #bbe355;
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    margin: 0;
+}
+
+#nombre_proyecto {
+    background-color: #bbe355;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.contenedor-secciones {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; 
+}
+
+#entendimiento, #entendimiento_datos {
+    background-color: #d5e6ab;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid #aac04f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#entendimiento:hover, #entendimiento_datos:hover {
+    transform: translateY(-5px);
+    background-color: #cbe480;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#boton {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px; /* menos padding para hacerlo más compacto */
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 2px solid #aac04f;
+    font-size: 20px;
+    border-radius: 10px;
+
+    width: fit-content;   
+    margin: 20px auto;    
+}
+
+#ingDatos{
+    text-decoration: none;
+    color: black;
+}
+
+#boton:hover {
+    background-color: #cbe480;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
