@@ -6,9 +6,8 @@ import joblib
 
 app = Flask(__name__)
 
-# Cargar modelo previamente entrenado
 contenido = joblib.load('modelo_suicidio.pkl')
-modelo_cargado = contenido['modelo']  # Cambia 'modelo' por la clave correcta si es otra
+modelo_cargado = contenido['modelo']  
 
 @app.route('/')
 def index():
