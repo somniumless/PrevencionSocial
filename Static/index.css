@@ -25,9 +25,9 @@ header{
     border-image: linear-gradient(90deg, #7faaff, #a259ff, #7faaff) 1;
     border-radius: 12px;
     padding: 32px 0 28px 0;
-    margin-top: 28px; /* separa del header */
+    margin-top: 28px; 
     text-align: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13), 0 0 0 4px rgba(122, 170, 255, 0.15); /* Sombra extra para el borde */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13), 0 0 0 4px rgba(122, 170, 255, 0.15); 
     width: 88%;
     max-width: 600px;
     margin-left: auto;

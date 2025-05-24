@@ -1,11 +1,9 @@
-/* Fondo general */
 body {
     background: linear-gradient(to bottom right, #dbefff, #b3d9ff);
     margin: 0;
     padding: 0;
 }
 
-/* Encabezado */
 header {
     background: linear-gradient(to right, #a3d0ff, #cbe6ff);
     font-family: "Special Gothic Expanded One", sans-serif;
@@ -34,7 +32,6 @@ h1 {
     color: #003d66;
 }
 
-/* Contenedor de secciones */
 .contenedor-secciones {
     display: flex;
     flex-direction: column;
@@ -42,7 +39,6 @@ h1 {
     padding: 20px;
 }
 
-/* Estilo de cada sección */
 #introduccion,
 #entendimiento,
 #entendimiento_datos {
@@ -57,7 +53,6 @@ h1 {
     color: #002233;
 }
 
-/* Efecto al pasar el mouse */
 #introduccion:hover,
 #entendimiento:hover,
 #entendimiento_datos:hover {
@@ -66,7 +61,6 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 51, 102, 0.2);
 }
 
-/* Botón de navegación */
 #boton {
     font-family: "Special Gothic Expanded One", sans-serif;
     display: flex;
@@ -94,7 +88,6 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 51, 102, 0.2);
 }
 
-/* Pie de página */
 footer {
     background: linear-gradient(to right, #a3d0ff, #d2eaff);
     text-align: center;
