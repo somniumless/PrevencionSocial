@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación del Modelo de Riesgo</title>
+    <link rel="stylesheet" href="static/evaluacion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Evaluación del Modelo de Riesgo de Suicidio</h1>
+
+        <h2 class="section-title">Métricas de Desempeño Globales</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>Precisión (Accuracy)</h3>
+                <p class="value">{{ '%.2f' | format(metrics.accuracy * 100) }}%</p>
+            </div>
+            <div class="metric-card">
+                <h3>Sensibilidad (Recall)</h3>
+                <p class="value">{{ '%.2f' | format(metrics.recall * 100) }}%</p>
+            </div>
+            <div class="metric-card">
+                <h3>Especificidad</h3>
+                <p class="value">{{ '%.2f' | format(metrics.specificity * 100) }}%</p>
+            </div>
+            <div class="metric-card">
+                <h3>Precisión (Precision)</h3>
+                <p class="value">{{ '%.2f' | format(metrics.precision * 100) }}%</p>
+            </div>
+            <div class="metric-card">
+                <h3>Puntuación F1</h3>
+                <p class="value">{{ '%.2f' | format(metrics.f1_score * 100) }}%</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Matriz de Confusión</h2>
+        <div class="confusion-matrix-container">
+            <table class="confusion-matrix-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2">Predicción del Modelo</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Riesgo (Positivo)</th>
+                        <th>No Riesgo (Negativo)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Real: Riesgo (Positivo)</th>
+                        <td class="true-positive">{{ metrics.tp }}</td>
+                        <td class="false-negative">{{ metrics.fn }}</td>
+                    </tr>
+                    <tr>
+                        <th>Real: No Riesgo (Negativo)</th>
+                        <td class="false-positive">{{ metrics.fp }}</td>
+                        <td class="true-negative">{{ metrics.tn }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+    </div>
+</body>
+</html>
